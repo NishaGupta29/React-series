@@ -8,9 +8,13 @@ function App() {
   let[counter ,nishacounter]=useState(15)
 //  let counter=15;
  const addValue=()=>{
-  console.log("clicked" , counter)
+  // console.log("clicked" , counter)
  
   nishacounter(counter+1)
+ }
+
+ const removeValue=()=>{
+   nishacounter(counter-1)
  }
 
   return (
@@ -19,7 +23,7 @@ function App() {
    <h2>counter value: {counter}</h2>
    <button onClick={addValue}>Add value{counter}</button>
    <br/>
-   <button>remove value {counter}</button>
+   <button onClick={removeValue}>remove value {counter}</button>
    </>
   )
 }
