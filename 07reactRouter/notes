@@ -1,0 +1,83 @@
+third part app...react router dom used
+tailwind css se project bnao
+vite confi change kro
+index.css mein tailwind import kro
+npm run dev
+
+phle web ke components bnao
+   src-components
+       folders and files here
+       Header->fheader.jsx
+       Footer->footer.jsx
+       Home->Home.jsx
+       Contact->contact.jsx
+       user->user.jsx
+
+
+
+npm i react-router-dom
+
+header mein link, navlink
+import {Link ,Navlink} from react-router-dom
+link inplace of 'a' tag
+bcz page baar baar reload na ho
+why navlink
+bcz it provides addtional things
+
+link mein href ki jagah to likhte hai
+navlink mein css style change ---isactive variable used hua h taki hmm kaun se link par ja rhe agar uska url isactive se match hua to coloor change
+ye automatic hota hai 
+navlink mein bhi to use krte hai
+
+footer bnao
+
+home bnao
+  home.jsx
+
+
+ abb teeno ko assemble kaise kre
+
+  app.jsx mein bhi kar skte hai 
+  import bhi kro 3no file ko app.jsx mein
+  return (
+    <header/>
+    <home/>
+    <footer/>
+  )
+  btt ye shi ni h
+
+  main.jsx mein jayenge
+  .render(
+    <ReactProvider router={router}/>
+  )
+  btt router bnana pdega main.jsx mein
+
+  using createbrowserrouter se
+  {
+    path:'/'
+    element:<layout/>
+    children:[
+        {
+            //nesting route here
+            path:"",
+            element:<home/>
+
+        },
+        {
+            path:'about',
+            element:<about/>
+
+        }
+    ]
+  }
+
+iske phle jaise ki hmko header footer same rkhna hai aur home k content hi change hona hai
+to src mein layout.jsx file bna kr ye kar lete h
+outlet import kro react router dom se
+<header/>
+<outlet/>
+<footer/>
+
+now main .jsx par jao
+
+jaha jaha link ya navlink use kro waha waha import kr lo link ko
